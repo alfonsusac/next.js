@@ -9,7 +9,10 @@ When used in a streaming context, this will insert a meta tag to emit the redire
 
 If a resource doesn't exist, you can use the [`notFound` function](/docs/app/api-reference/functions/not-found) instead.
 
-> **Good to know**: If you prefer to return a 308 (Permanent) HTTP redirect instead of 307 (Temporary), you can use the [`permanentRedirect` function](/docs/app/api-reference/functions/permanentRedirect) instead.
+> **Good to know**: 
+>
+> - If you prefer to return a 308 (Permanent) HTTP redirect instead of 307 (Temporary), you can use the [`permanentRedirect` function](/docs/app/api-reference/functions/permanentRedirect) instead.
+> - The `redirect` function works by throwing an error that will be caught by Next's routing system. So putting in event callbacks like `onClick` will not work
 
 ## Parameters
 
